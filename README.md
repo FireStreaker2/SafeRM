@@ -3,10 +3,13 @@
 # About
 SafeRM is a way to easily remove files and folders inside of your terminal, without the worries of accidently deleting something important forever.
 
+# Notice
+``saferm`` was already used on [crates.io](https://crates.io/) so it's sometimes referenced as ``Improved RM`` in the code. Apologies for the confusion!
+
 # Installation
 Cargo
 ```bash
-$ cargo install saferm --locked
+$ cargo install improved-rm --locked
 ```
 
 Git
@@ -20,7 +23,7 @@ Alternatively, you may also download the binary from the [releases](https://gith
 
 # Usage
 ```console
-SafeRM 1.0
+Improved-RM 1.0
 FireStreaker2
 Safely remove files via your terminal
 

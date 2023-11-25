@@ -1,5 +1,5 @@
 [package]
-name = "saferm"
+name = "improved-rm"
 description = "Safely remove files via your terminal"
 authors = ["FireStreaker2"]
 license = "MIT"

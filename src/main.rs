@@ -18,7 +18,7 @@ fn main() {
         env::set_var("DESTINATION", dir.to_str().unwrap());
     }
 
-    let matches = App::new("SafeRM")
+    let matches = App::new("Improved-RM")
         .version("1.0")
         .author("FireStreaker2")
         .about("Safely remove files via your terminal")
@@ -47,7 +47,7 @@ fn move_file(source_file: &str, dest_dir: &str) {
         fs::rename(source_path, dest_file_path).expect("Failed to move file");
     } else {
         eprintln!(
-            "saferm: cannot remove '{}': No such file or directory",
+            "improved-rm: cannot remove '{}': No such file or directory",
             source_file
         );
     }
