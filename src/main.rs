@@ -6,8 +6,6 @@ use std::path::{Path, PathBuf};
 
 fn main() {
     if env::var("DESTINATION").is_err() {
-        println!("No destination directory set...");
-
         let dir = match dirs::home_dir() {
             Some(home_dir) => home_dir.join("Trash"),
             None => PathBuf::from("Trash"),
@@ -18,11 +16,6 @@ fn main() {
         }
 
         env::set_var("DESTINATION", dir.to_str().unwrap());
-
-        println!(
-            "Succesfully set destination directory to {}",
-            dir.to_str().unwrap()
-        );
     }
 
     let matches = App::new("SafeRM")
@@ -52,9 +45,10 @@ fn move_file(source_file: &str, dest_dir: &str) {
         let dest_file_path = dest_path.join(file_name);
 
         fs::rename(source_path, dest_file_path).expect("Failed to move file");
-
-        println!("File moved successfully!");
     } else {
-        eprintln!("Source file does not exist.");
+        eprintln!(
+            "saferm: cannot remove '{}': No such file or directory",
+            source_file
+        );
     }
 }
