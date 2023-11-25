@@ -1,6 +1,12 @@
 [package]
 name = "saferm"
-version = "0.1.0"
+description = "Safely remove files via your terminal"
+authors = ["FireStreaker2"]
+license = "MIT"
+documentation = "https://github.com/FireStreaker2/SafeRM#usage"
+repository = "https://github.com/FireStreaker2/SafeRM"
+homepage = "https://github.com/FireStreaker2/SafeRM"
+version = "1.0.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
